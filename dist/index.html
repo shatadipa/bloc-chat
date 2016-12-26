@@ -4,6 +4,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Bloc Base Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 
@@ -12,13 +13,11 @@
     <ui-view></ui-view>
 
 
-    <!-- Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-
-    <!-- Angular UI Router -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-touch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.1/ui-bootstrap-tpls.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
-
-
     <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
     <script>
     // Initialize Firebase
@@ -38,6 +37,8 @@
 
     <script src="/scripts/app.js"></script>
     <script src="/scripts/services/Room.js"></script>
+        <script src="/scripts/controllers/CreateRoomCtrl.js"></script>
+
     <script src="/scripts/controllers/HomeCtrl.js"></script>
 
 </body>
