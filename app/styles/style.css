@@ -2,7 +2,8 @@
      margin-top:22px;
  }
 
- .room-list{
+ .room-list, 
+ .message-list{
      list-style:none;
      padding:0;
  }
@@ -10,3 +11,15 @@
  .room-list li{
      margin-top:5px;
  }
+
+ .message-list li{
+     padding: 5px 15px;
+ }
+
+.message-list li:nth-child(odd){
+    background-color: #c1eaff;
+}
+
+.current{
+    font-weight: bold;
+}

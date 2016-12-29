@@ -8,12 +8,20 @@
             </div>
 
             <ul class="room-list" >
-                <li ng-repeat="x in rooms" >{{x.name}}</li>
-                
+                <li ng-repeat="xroom in rooms" ng-click="selectRoom(xroom)" ng-class="{current:xroom === activeRoom}">{{xroom.name}}</li>   
             </ul>
         </aside>
         <section class="col-md-8">
-            chat window
+            <h2>{{activeRoom.name}}</h2>
+            <ul class="message-list">
+                <li ng-repeat="message in activeRoomMessages">
+                    <div class="row">
+                        <p class="col-md-10">{{message.username}}</p>
+                        <p class="col-md-2">{{message.sentAt|date:short}}</p>
+                    </div>
+                    <p>{{message.content}}</p>
+                </li>
+            </ul>
         </section>
     </main>
 </div>
