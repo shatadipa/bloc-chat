@@ -8,13 +8,27 @@
             });
         $stateProvider
             .state('home', {
-                controller:'HomeCtrl as home',
+                controller: 'HomeCtrl as home',
                 url: '/',
                 templateUrl: '/templates/home.html'
             });
     }
 
+    function BlocChatCookies($cookies, $uibModal) {
+        var currentUser = $cookies.get('blocChatCurrentUser');
+        if (!currentUser || currentUser === '') {
+            $uibModal.open({
+                templateUrl: '/templates/enter-username.html',
+                controller: 'EnterUsernameCtrl',
+                backdrop: false
+            });
+        }
+    }
+
     angular
-        .module('blocChat', ['ui.router', 'firebase','ui.bootstrap'])
-        .config(config);
+        .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap', 'ngCookies'])
+        .config(config)
+        .run(['$cookies', '$uibModal', BlocChatCookies]);
+
+
 })();

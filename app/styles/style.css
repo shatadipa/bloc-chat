@@ -10,6 +10,8 @@
 
  .room-list li{
      margin-top:5px;
+     cursor: pointer;
+     padding: 5px 10px;
  }
 
  .message-list li{
@@ -22,4 +24,5 @@
 
 .current{
     font-weight: bold;
+    background-color: #c1eaff;
 }
