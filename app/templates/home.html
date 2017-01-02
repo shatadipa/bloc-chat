@@ -7,8 +7,8 @@
                 <a class="col-md-4 btn btn-primary btn-sm new-room" href="#" ng-click="showPopUp()">New Room</a>
             </div>
 
-            <ul class="room-list" >
-                <li ng-repeat="xroom in rooms" ng-click="selectRoom(xroom)" ng-class="{current:xroom === activeRoom}">{{xroom.name}}</li>   
+            <ul class="room-list">
+                <li ng-repeat="xroom in rooms" ng-click="selectRoom(xroom)" ng-class="{current:xroom === activeRoom}">{{xroom.name}}</li>
             </ul>
         </aside>
         <section class="col-md-8">
@@ -22,6 +22,10 @@
                     <p>{{message.content}}</p>
                 </li>
             </ul>
+            <form ng-show="activeRoom.name" ng-submit="sendMessage()" >
+                <input class="col-md-10" ng-model="messageContent" id="messageContent">
+                <input type="submit" href="#" class="col-md-2 btn btn-primary" ng-disabled="!messageContent" value="Send"></input>
+            </form>
         </section>
     </main>
 </div>

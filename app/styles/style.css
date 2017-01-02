@@ -8,6 +8,10 @@
      padding:0;
  }
 
+ .message-list{
+     height:500px;
+ }
+
  .room-list li{
      margin-top:5px;
      cursor: pointer;
@@ -26,3 +30,12 @@
     font-weight: bold;
     background-color: #c1eaff;
 }
+
+#messageContent{
+    height: 34px;
+}
+
+.btn{
+    border-radius: 0;
+}
+

@@ -1,10 +1,15 @@
 (function () {
     function CreateRoomCtrl($scope, Room, $uibModalInstance) {
+
        $scope.cancel= function(){
            $uibModalInstance.dismiss();
        };
        $scope.create = function(){
-           Room.add({name:$scope.name});
+           var room = {};
+           
+           room.name = $scope.name;
+           Room.add(room);
+           
            $uibModalInstance.close();
        };
     }
